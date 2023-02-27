@@ -1,0 +1,51 @@
+/* Styling Below */
+
+@font-face {
+    font-family: 'aquire';
+    src: url('./AquireLight.otf');
+}
+@font-face {
+    font-family: 'submit';
+    src: url('./digital-7.ttf');
+}
+
+body{
+    background: #020218;
+    color: wheat;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.form-check-label{
+    font-family: monospace;
+    cursor: pointer;
+}
+.col-form-label{
+    font-family: 'aquire';
+    letter-spacing: 1.5px;
+    font-size: 0.87rem;
+}
+.btn-outline-success{
+    font-family: 'submit';
+    letter-spacing: 2px;
+}
+#resbox{
+    min-height: 100px;
+    background: #06061f;
+    color: aqua;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    overflow-x: auto;
+}
+.btn-primary{
+    font-family: 'submit';
+    letter-spacing: 1.5px;
+}
+
+#resbox::-webkit-scrollbar {
+    display: none;
+}
+pre[class*=language-] {
+    background: none !important;
+}
+.toolbar{
+    display: none !important;
+}

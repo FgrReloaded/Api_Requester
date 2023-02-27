@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requester</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center"> Welcome to Requester</h3>
+                <hr>
+                <hr>
+            </div>
+            <div class="col-12">
+                <div class="container">
+                    <!-- REQUEST TYPES -->
+                    <div class="form-group row">
+                        <label for="url" class="col-sm-2 col-form-label">URL</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="url" placeholder="Enter Your Api Url" type="url">
+                        </div>
+                    </div>
+                    <br>
+                    <!-- CONTENT TYPES -->
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <label class="col-form-label col-sm-2 pt-0">Request Type</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input checked value="GET" type="radio" name="requestType" id="get"
+                                        class="form-check-input">
+                                    <label for="get" class="form-check-label">GET</label>
+                                </div>
+                                <div class="form-check">
+                                    <label for="post" class="form-check-label">POST</label>
+                                    <input value="POST" type="radio" name="requestType" id="post" class="form-check-input">
+                                </div>
+                                <div class="form-check">
+                                    <input value="PUT" type="radio" name="requestType" id="put" class="form-check-input">
+                                    <label for="put" class="form-check-label">PUT</label>
+                                </div>
+                                <div class="form-check">
+                                    <input value="DELETE" type="radio" name="requestType" id="del"
+                                        class="form-check-input">
+                                    <label for="del" class="form-check-label">DELETE</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <!-- JSON AND CUSTOM PARAMS -->
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <label class="col-form-label col-sm-2 pt-0">Content Type</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input checked value="json" type="radio" name="contentType" id="json"
+                                        class="form-check-input">
+                                    <label for="json" class="form-check-label">JSON</label>
+                                </div>
+                                <div class="form-check">
+                                    <input value="custom" type="radio" name="contentType" id="customparams"
+                                        class="form-check-input">
+                                    <label for="customparams" class="form-check-label">Custom Parameters</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <!-- CUSTOM PARAMETERS BOX -->
+                    <div id="paramBox" class="d-none">
+                        <div class="form-group row">
+                            <label for="paramkey1" class="col-sm-2 col-form-label">Parameter-1</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="Enter Key" id="paramkey1">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="Enter Key Value" id="paramvalue1">
+                            </div>
+                            <button class="btn btn-warning w-auto" id="moreParams">+</button>
+                        </div>
+                    </div>
+                    <div id="params" class="d-none">
+                    </div>
+                    <br>
+                    <!-- Json Request Box -->
+                    <div id="jsonBox">
+                        <div class="form-group row">
+                            <label for="jsonbox" class="col-sm-2 col-form-label">Custom JSON</label>
+                            <div class="col-sm-10">
+                                <textarea rows="4" id="jsonbox" class="form-control" placeholder="Enter Your JSON here"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Submit Button -->
+                    <button disabled class="btn btn-outline-success float-end" id="submit">Submit</button>
+
+                    <br>
+                    <!-- Response Box -->
+                    <div id="resBox" class="my-5">
+                        <div class="form-group row">
+                            <label for="resbox" class="col-sm-2 col-form-label">Response</label>
+                            <div class="col-sm-10">
+                                <pre><code class="language-json form-control" id="resbox">### Your Response Will be Shown Here !</code></pre>
+                                <button disabled class="btn btn-primary btn-small my-2 float-end" id="copy">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="prism.js"></script>
+</body>
+
+</html>
